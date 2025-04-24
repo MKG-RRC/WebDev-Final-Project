@@ -6,7 +6,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    
+
 }
 
 body {
@@ -45,7 +45,6 @@ body {
 
 .logo-container {
     display: flex;
-    position: ;
     width: 77px;
     height: 92px;
     border: 3px solid #000;
@@ -56,8 +55,11 @@ body {
 .logo {
     color: #000;
     font-size: 40px;
+    padding-left: 1000;
+
     font-weight: bolder;
     text-decoration: none;
+    z-index: 10;
 }
 
 header {
@@ -100,6 +102,8 @@ nav {
     display: flex;
     flex: wrap;
     justify-content: end;
+    z-index: 14; /* Ensure it's above other elements */
+
 }
 
 #menu {
@@ -107,6 +111,7 @@ nav {
     top: 130px; /* Adjust the top space as needed */
     right: 130px; /* Position the menu to the right side */
     cursor: pointer;
+    z-index: 13; /* Ensure it's above other elements */
     transition: 0.3s ease-in;
 }
 
@@ -141,7 +146,7 @@ nav {
 /*nav-links*/
 
 .menu-icons{
-    width: 400px;
+    width: 300px;
     margin: 0;
     display: none;
     position: absolute; 
@@ -159,6 +164,7 @@ nav {
     justify-content: center;
     width: 171px;
     height: 55px;
+    z-index: 15; /* Ensure it's above other elements */
 }
 
 
@@ -167,13 +173,14 @@ nav {
     flex-wrap: wrap;
     text-decoration: none;
     color: #000;
-    font-size: 48px;
+    font-size: 28px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     justify-content: end;
     padding-bottom: 30px;
     transition: ease-in 0.3s;
+    z-index: 16; /* Ensure the links are on top of the parent */
 }
 
 .menu-icons a:hover {
@@ -187,7 +194,7 @@ nav {
 
 @media (max-width: 1060px) {
     body {
-      background-color: #383838; /* Example of a background color change */
+      background-color: #555555; /* Example of a background color change */
     }
 
     #top-section  nav header {
@@ -206,42 +213,76 @@ nav {
         font-size: 72px;
         padding-top: 150px;
         word-wrap: break-word;
+        transition: 0.3s ease-in;
+
     }
 
     header p {
         font-size: 18px;
         color: #f6f6f6;
         word-wrap: break-word;
+        transition: 0.3s ease-in;
+
     }
 
-    .logo {
-        color: hsl(0, 0%, 98%);
-        font-size: 40px;
-        font-weight: bolder;
-        text-decoration: none;
-    }
 
     #proceed-button {
-        background: white;
-        color: black;
-        font-size: larger;
+        position: absolute;
+        bottom: 50px;
+         font-size: 18px;
+        font-weight: bolder;
+        letter-spacing: 3px;
+        color: white;
+        width: 148px;
+        height: 63px;
+        border: 0;
+        transition: 0.3s ease-in;
+    
     }
 
     #image-disc-container {
-        z-index: 1;
-        position: absolute;
-        transform: rotate(90deg);
-        right: -12px;
-        bottom: 9%;
+       display: none;
     }
 
     #disc  {
-        width: 400px;
+        width: 200px;
 
     }
+    .menu-icons {
+        width: 300px;
+        /* This ensures it is part of the stacking context */
+        z-index: 10;         /* Higher z-index to ensure it's on top */
+    }
 
+    .menu-icons li a {
+        flex-direction: row;
+    }
 
-}
+    .menu-icons a {
+        font-size: 16px;
+        font-weight: 700;
+        justify-content: end;
+        z-index: 11;         /* Ensure the links are on top of the parent */
+        position: relative;  /* Positioning the links relative to their parent */
+    }
+
+    #learn-more-button  {
+        position: absolute;
+        bottom: 50px;
+        width: 200px;
+        height: 50px;
+        background-color: #ff8c3a;
+        border: none;
+        padding: 12px 50px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: bold;
+        transition: 0.3s ease-in;
+
+    }
+  }
+
 
 
 
@@ -531,13 +572,14 @@ footer {
 
 
 /* About us */
-/* About us */
 
 .about-us {
+    height: auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
     text-align: center;
+    z-index: 10; /* Ensure it's above other elements */
 
 }
 .about-header {
@@ -545,16 +587,16 @@ footer {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin-bottom:700px;
+    margin-bottom:900px;
+margin-top: auto;
 }
 
-.about-header  a {
+#learn-more-button  a {
     text-decoration: none;
     color: #000;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
-    line-height: normal;
     transition: ease-in 0.3s;
 }
 
@@ -564,28 +606,36 @@ footer {
     line-height: normal;
     }
 
-#learn-more-button{
-    margin-top: 0;
-    background-color: #ff8c3a;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 24px;
-    transition: 0.3s ease;
-}
+#learn-more-button {
+        margin-top: 300px;
+        width: 200px;
+        height: 50px;
+        background-color: #ff8c3a;
+        border: none;
+        padding: 12px 50px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: bold;
+        transition: 0.3s ease;
+        z-index: 10; /* Ensure it's above other elements */
+        transition: 0.3 ease-in;
+        filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.3));
+        
+    }
 
-#learn-more-button:hover {
-    background-color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s ease;
-    filter: drop-shadow(5px 5px 10px #000000);
-}
-
+    #learn-more-button:hover {
+        background-color: #ffffff;
+        border: none;
+        padding: 12px 24px;
+        font-size: 1.2rem;  /* Slightly larger text on hover */
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s ease;
+        filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.3));
+        transform: scale(1.1); /* Slight scaling effect */
+    }
+    
 
 
 
@@ -598,6 +648,7 @@ footer {
     padding: 30px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     max-width: 600px;
+    width: 100%;
     margin: auto;
 }
 
