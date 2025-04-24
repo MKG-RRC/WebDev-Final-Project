@@ -6,23 +6,17 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    
 }
 
 body {
     padding: 20px;
     margin-right: 65px;
     display: flex;
-    flex: wrap;
     flex-direction: column;
     box-sizing: border-box;
-    overflow-x: hidden;
-
 }
 
 #top-section {
-    display: flex;
-    justify-content: center;
     border-radius: 34px;
     background: #d3d3d3;
     height: 100vh;
@@ -30,14 +24,16 @@ body {
     max-height: 100%;
     max-width: 100%;
     margin: 32px;
+
     padding: 100px;
-    gap: 20px;
+
 }
 
 #image-disc-container {
+    z-index: 1;
     position: absolute;
     transform: rotate(90deg);
-    right: -47px;
+    right: -50px;
     bottom: 9%;
 }
 
@@ -45,7 +41,6 @@ body {
 
 .logo-container {
     display: flex;
-    position: ;
     width: 77px;
     height: 92px;
     border: 3px solid #000;
@@ -72,10 +67,10 @@ header h1 {
     font-style: auto;
     font-weight: 700;
     padding-top: 150px;
+    text-wrap: break-word;
 }
 
 header p {
-    position: absolute;
     width: 100%;
     color: #000;
     font-size: 20px;
@@ -85,27 +80,17 @@ header p {
     padding-top: 50px;
     padding-bottom: 40px;
     word-wrap: break-word;
-
 }
 
 nav {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
-}
-
-.menu-container {
-    margin-left: 1500px;
-    display: flex;
-    flex: wrap;
-    justify-content: end;
+    justify-content: space-between
 }
 
 #menu {
-    position: absolute; /* Position the menu inside the top-section */
-    top: 130px; /* Adjust the top space as needed */
-    right: 130px; /* Position the menu to the right side */
+    margin-left: auto;
+    transition: ease-in 0.1s;
+    display: block;
     cursor: pointer;
     transition: 0.3s ease-in;
 }
@@ -116,8 +101,6 @@ nav {
 
 }
 #proceed-button {
-    position: absolute;
-    bottom: -450px;
     font-size: 18px;
     font-weight: bolder;
     letter-spacing: 3px;
@@ -141,22 +124,14 @@ nav {
 /*nav-links*/
 
 .menu-icons{
-    width: 400px;
+    width: 260px;
     margin: 0;
     display: none;
-    position: absolute; 
-    top: 120px;
-    right: 200px;
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 70px;
 }
-
 
 .menu-icons li a {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     width: 171px;
     height: 55px;
 }
@@ -164,7 +139,6 @@ nav {
 
 .menu-icons a {
     display: flex;
-    flex-wrap: wrap;
     text-decoration: none;
     color: #000;
     font-size: 48px;
@@ -179,7 +153,6 @@ nav {
 .menu-icons a:hover {
     color: rgb(255, 145, 2);
     text-decoration: underline;
-
 }
 
 
@@ -187,14 +160,19 @@ nav {
 
 @media (max-width: 1060px) {
     body {
-      background-color: #383838; /* Example of a background color change */
+      background-color: #e41e14; /* Example of a background color change */
     }
 
     #top-section  nav header {
      
-        flex-direction: column; /* Stack content vertically on smaller screens */
-        padding: 20px;
-        z-index: 1;
+        border-radius: 34px 34px 6px 34px;
+        background: rgb(60, 0, 255);
+        height: 700px;
+        width: 100%;
+        max-height: 100%;
+        margin: 34px;
+        padding: 80px;
+        justify-content: space-evenly;
     }   
 
     header {
@@ -227,26 +205,13 @@ nav {
         font-size: larger;
     }
 
-    #image-disc-container {
-        z-index: 1;
-        position: absolute;
-        transform: rotate(90deg);
-        right: -12px;
-        bottom: 9%;
-    }
-
-    #disc  {
-        width: 400px;
-
-    }
-
 
 }
 
 
 
 @media (max-width: 440px)  and (max-height: 960px ){
-
+    
     * {
         padding: 0;
         margin: 0;
@@ -338,11 +303,14 @@ nav {
 /*Main Section*/
 
 main {
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    border-radius: 34px;
+    border-radius: 34px 34px 34px 34px;
     background: rgba(215, 218, 219, 0.862);
-    height: auto;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
+    max-height: 100%;
+    max-width: 100%;
     margin: 34px;
     padding: 100px;
     gap: 20px;
@@ -350,99 +318,64 @@ main {
 }
 
 #musicplayer-section {
-    text-align: center;
-    margin: 20px;
-    order: 0;
+    border: 2px solid black;
+    border-radius: 34px 34px 34px 34px;
 }
 
-.music-container {
+
+#multiplayer-section {
+    width: 424px;
+    height: 574px;
+    background-color: white;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 20px;
 }
 
-.music-player {
-    background: #f3f3f3;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    width: 300px;
+
+.music-player-container {
     text-align: center;
-}
-
-#song-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-#artist {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 300px;
 }
 
 #album-art {
-    width: 100px;
-    height: 100px;
-    border-radius: 10px;
-    margin-bottom: 15px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#song-title, #artist {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
 .control-btn {
-    background-color: #4CAF50;
+    background-color: #918d8d;
     color: white;
-    padding: 10px 20px;
     border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
     border-radius: 5px;
     cursor: pointer;
-    margin: 5px;
+    transition: background-color 0.3s ease;
+    margin: 10px;
 }
 
 .control-btn:hover {
-    background-color: #45a049;
-}
-
-#audio-player {
-    width: 100%;
-    margin-top: 10px;
+    background-color: #2980b9;
 }
 
 
 #pomodoro-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     border: 2px solid black;
-    border-radius: 34px;
-    flex-direction: column;
-    padding: 40px;
-    justify-content: center;
-    align-items: center;
-    background: #f3f3f3;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    width: 90%; /* Make width percentage-based */
-    max-width: 1000px; /* Set a maximum width */
-    height: auto; /* Make height flexible */
-    max-height: 1000px; /* Set a maximum height */
-    margin: 20px auto; /* Center and give some space around */
-}
-
-#pomodoro-section h1{
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-#pomodoro-cointainer {
+    border-radius: 34px 34px 34px 34px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 20px;
+
 }
+
 
 .timer-container {
     text-align: center;
@@ -462,25 +395,25 @@ h1 {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
-    gap: 20px;
 }
 
-.time-display h1 {
-    font-size: 60px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
-}
+
 
 button:hover {
     background-color: #2980b9;
 }
 
-.start-btn, .break-btn, .reset-btn {
-    background-color: #3498db; /* Blue for start */
-    background-color: #414141; /* Green for start */
+.start-btn {
+    background-color: #2ecc71; /* Green for start */
 }
 
+.reset-btn {
+    background-color: #e74c3c; /* Red for reset */
+}
+
+.break-btn {
+    background-color: #f39c12; /* Yellow for break */
+}
 
 
 
@@ -530,7 +463,6 @@ footer {
 }
 
 
-/* About us */
 /* About us */
 
 .about-us {
@@ -585,8 +517,6 @@ footer {
     transition: 0.3s ease;
     filter: drop-shadow(5px 5px 10px #000000);
 }
-
-
 
 
 
@@ -692,7 +622,7 @@ textarea {
 /*For Sign up page*/
 
 #sign-up-title  {
-    padding-top: 150px;
+    padding-top: 40px;
     font-size: 36px;
     text-align: center;
     margin-bottom: 10px;
