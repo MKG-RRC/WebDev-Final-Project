@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Contact</title>
+</head>
+<body>
+
+    <div id="top-section">
+        <nav>
+            <div class="logo-container">
+                <a href="index.html" class="logo">MA RK.</a>
+            </div>
+            <svg id="menu" xmlns="http://www.w3.org/2000/svg" width="54" height="30" viewBox="0 0 54 30" fill="none">
+                <rect width="54" height="6" fill="black"/>
+                <rect y="12" width="54" height="6" fill="black"/>
+                <rect y="24" width="54" height="6" fill="black"/>
+            </svg>
+
+
+            <div class="menu-icons">
+                <a href="index.html">Home</a>
+                <a href="signUp.html">Sign Up </a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+        <div id="image-disc-container">
+            <img src="images/pexels-padrinan-167092-removebg-preview.png" alt="">
+        </div>
+
+
+        <section>
+            <div id="contact-container">
+                <h1 id="contact">Get in Touch</h1>
+                <p id="contact-p">We would love to hear from you! If you have any questions, feedback, or suggestions, please feel free to reach out to us. Your input is valuable in helping us improve our services.</p>
+        
+                <form id="contact-form" action="javascript:void(0);" method="POST">
+                    <div class="form-group">
+                        <label for="first-name">First Name:</label>
+                        <input type="text" id="first-name" name="first-name" placeholder="Please enter first name..." required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="last-name">Last Name:</label>
+                        <input type="text" id="last-name" name="last-name" placeholder="Please enter last name..." required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Please enter email..." required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Please enter phone number..." required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="message">What Do You Have in Mind?</label>
+                        <textarea id="message" name="message" placeholder="Please enter query..." rows="4" required></textarea>
+                    </div>
+        
+                    <button type="submit">Submit</button>
+                </form>
+        
+                <div id="summary-container" style="display: none;">
+                    <h2>Summary of Your Submission</h2>
+                    <p><strong>First Name:</strong> <span id="summary-first-name"></span></p>
+                    <p><strong>Last Name:</strong> <span id="summary-last-name"></span></p>
+                    <p><strong>Email:</strong> <span id="summary-email"></span></p>
+                    <p><strong>Phone Number:</strong> <span id="summary-phone"></span></p>
+                    <p><strong>Message:</strong> <span id="summary-message"></span></p>
+
+                    <h3 id="request_sent">Your request has been successfully sent.</h3>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+
+
+
+    <footer>
+        <div class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="signUp.html">Sign up</a>
+        </div>
+        <p>Mark Kenneth Garcia</p>
+        <p>2025 Full Stack Web Development</p>
+    </footer>
+
+
+
+    <script src="form.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

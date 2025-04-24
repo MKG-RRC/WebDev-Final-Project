@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    <div id="top-section">
+        <nav>
+            <div class="logo-container">
+                <a href="#" class="logo">MA RK.</a>
+            </div>
+            <svg id="menu" xmlns="http://www.w3.org/2000/svg" width="54" height="30" viewBox="0 0 54 30" fill="none">
+                <rect width="54" height="6" fill="black"/>
+                <rect y="12" width="54" height="6" fill="black"/>
+                <rect y="24" width="54" height="6" fill="black"/>
+            </svg>
+
+          
+            <div class="menu-icons">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+
+        <section>
+            <div class="auth-container" id="auth-container">
+                <h1 id="sign-up-title">Sign Up for Newsletter</h1>
+                <form id="sign-up-form" onsubmit="signUp(event)">
+                    <div class="form-group">
+                        <label for="sign-up-username" id="sign-up-username-label">Username:</label>
+                        <input type="text" id="sign-up-username" name="username" placeholder="Enter username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="sign-up-email" id="sign-up-email-label">Email:</label>
+                        <input type="email" id="sign-up-email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="sign-up-password" id="sign-up-password-label">Password:</label>
+                        <input type="password" id="sign-up-password" name="password" placeholder="Enter password" required>
+                        <small id="password-note" class="password-note">Password must be at least 8 characters long, contain one uppercase letter, one lowercase letter, one number, and one special character.</small>
+                    </div>
+                    <button type="submit" id="sign-up-submit">Sign Up</button>
+                </form>
+        
+                <!-- Success Message Container -->
+                <div id="success-message" class="success-message" >
+                    <p>Congratulations, you have signed up for the newsletter!</p>
+                    <button id="go-back" onclick="window.location.href='index.html'">Return home</button>
+
+                </div>
+            </div>
+        </section>
+        
+        
+        
+        
+
+    </div>
+
+    <footer>
+        <div class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="signUp.html">Sign up</a>
+        </div>
+        <p>2025 Mark Kenneth Garcia. All Rights Reserved. </p>
+    </footer>
+    <script src="signUp.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
